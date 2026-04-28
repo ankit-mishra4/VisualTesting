@@ -1,0 +1,8 @@
+{
+  "baseUrl": "https://practice.qabrains.com/ecommerce/login",
+  "validUser": {
+    "email": "test@qabrains.com",
+    "password": "Password123"
+  }
+}
+ 
