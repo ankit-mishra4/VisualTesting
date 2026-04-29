@@ -1,3 +1,4 @@
+
 import { test, expect } from "../src/fixture/LoginFixture";
 import registration from "../src/testdata/registration.json";
 import { faker } from "@faker-js/faker";

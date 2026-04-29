@@ -6,6 +6,8 @@ import { registrationAction } from "../Actions/registrationAction";
 import { ParaAction } from "../Actions/ParaAction";
 
 import paraData from "../testdata/paraBank.json"; 
+import { alertAction } from "../Actions/AlertAction";
+import alertData from "../testdata/alert.json";
 
 
 type AppActions = {
@@ -13,6 +15,7 @@ type AppActions = {
   LoginA: loginAction;
   registration: registrationAction;
   paraaction: ParaAction;
+  alertA: alertAction;
 };
 
 type Fixtures = {
@@ -26,7 +29,7 @@ export const test = base.extend<Fixtures>({
 gotoBaseUrl: [
   async ({ page }, use) => {
 
-    await page.goto(paraData.baseUrL);
+    await page.goto(alertData.baseUrlAlert);
     await page.waitForLoadState('domcontentloaded');
 
     await use(); 
@@ -42,6 +45,7 @@ gotoBaseUrl: [
       LoginA: new loginAction(page),
       registration: new registrationAction(page),
       paraaction: new ParaAction(page),
+      alertA: new alertAction(page),
     };
 
     await use(appAction);

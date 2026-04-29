@@ -11,7 +11,7 @@ export class ParaAction {
         this.page = page;
     }
 
-    // =========================
+    // =============================
     //  FILL FORM
     // =========================
     async filldata() {
@@ -51,5 +51,6 @@ export class ParaAction {
         await expect(this.parapage.State).toHaveScreenshot("state.png");
         await expect(this.parapage.City).toHaveScreenshot("city.png");
         await expect(this.parapage.Address).toHaveScreenshot("address.png");
+        await expect(this.parapage.Address).toHaveScreenshot("done");
     }
 }
